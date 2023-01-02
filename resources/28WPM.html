@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>28 WPM</title>
+		<meta charset ="dtf-8"/>
+		<meta http-equiv = "content-type" content = "text.html"; charset=utf-8 />
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<style>
+		.home{
+			height: 75px;
+			width: 450px;
+			font-size: 30px;
+			background: #EBF5FB;
+			border-radius: 5px;
+			color: #2980B9;
+		}
+
+		.home:hover{
+			font-size: 32px;
+			color: #E9FFFF;
+			background: #2980B9;
+		}
+		
+		.box{
+			width: 1000px;
+			height: 200px;
+			border: 5px;
+			margin-left: 20px;
+			border-radius: 2px;
+			border-color: black;
+			background: white; 
+			font-family: consolas;
+		}
+
+		#heading{
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+			font-size: 120;
+			color: #2980B9;
+		}
+
+		#summary{
+			height: 200px;
+			width: 200px;
+			font-size: 30px;
+			padding-top: 10px;
+			padding-left: 100px;
+			text-align: center;
+		}
+
+		button{
+			width: 200px; 
+			height: 50px;
+			font-weight: bold;
+			background-color: #2980B9 ;
+			color:  #FFFFFF  ;
+			border-color: #85C1E9 ;
+		}
+		button:hover{
+			background-color: #EBF5FB ;
+			color: #1A5276;
+			border-color: #1A5276;
+			font-weight: bold;
+		}
+		button:focus{
+			background-color: #1A5276;
+			color:  #FFFFFF  ;
+			font-size: 14px;
+			border-color: #85C1E9 ;	
+			border-width: 2px;
+		}
+
+		</style>
+	</head>
+	<body style="background: #EBF5FB; font-family: consolas ; ">
+		
+			<hr >
+			<div style="float: left; margin-top: 10px;">
+				<a href="../TYPING_TEST_DEMO.html">
+					<button class="home">
+						<SPAN style="font-weight:bold">
+							TypeEz
+						</SPAN>
+					</button>
+				</a>
+			</div>
+			<div style="float: right; margin-top: 10px;">
+				CHANDA MISHRA <img src="image.png" width="70px" height="70px">
+			</div>
+			<H1 id="heading">28 WPM</H1>
+			<br>
+			<hr style="height: 50px; background-color: #3498DB; "><br>
+		
+		<table >
+			<tr >
+				<td rowspan="3" width="70%">	
+					<div class="box">
+						<iframe id= "displayQuestion" src=" " width="990" height="190"></iframe>
+					</div>
+				</td>
+				<td colspan="2" style="padding-left: 10px;">
+					<span id="qText" style="width: 200px; height: 50px; font-size: 20px;">
+						Question: 
+					</span>
+					<select name="question" id="question" style="width: 50px; height: 30px; font-size: 20px">
+						<option value="1">1</option>	<option value="2">2</option>	<option value="3">3</option>	<option value="4">4</option>	<option value="5">5</option>
+						<option value="6">6</option>	<option value="7">7</option>	<option value="8">8</option>	<option value="9">9</option>	<option value="10">10</option>
+						<option value="11">11</option>	<option value="12">12</option>	<option value="13">13</option>	<option value="14">14</option>	<option value="15">15</option>
+						<option value="16">16</option>	<option value="17">17</option>	<option value="18">18</option>	<option value="19">19</option>	<option value="20">20</option>
+						<option value="21">21</option>	<option value="22">22</option>	<option value="23">23</option>	<option value="24">24</option>	<option value="25">25</option>
+						<option value="26">26</option>	<option value="27">27</option>	<option value="28">28</option>	<option value="29">29</option>	<option value="30">30</option>
+						<option value="31">31</option>	<option value="32">32</option>	<option value="33">33</option>	<option value="34">34</option>	<option value="35">35</option>
+						<option value="36">36</option>	<option value="37">37</option>	<option value="38">38</option>	<option value="39">39</option>	<option value="40">40</option>
+						<option value="41">41</option>	<option value="42">42</option>	<option value="43">43</option>	<option value="44">44</option>	<option value="45">45</option>
+						<option value="46">46</option>	<option value="47">47</option>	<option value="48">48</option>	<option value="49">49</option>	<option value="50">50</option>
+						<option value="51">51</option>	<option value="52">52</option>	<option value="53">53</option>	<option value="54">54</option>	<option value="55">55</option>
+						<option value="56">56</option>	<option value="57">57</option>	<option value="58">58</option>	<option value="59">2018</option>
+					</select>
+					<span id= "questionDetails" style="font-size: 20px; margin-left: 10px;"> </span>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px;">
+					<button id="start" onclick="loadQuestion(); start();" >
+						START
+					</button>
+				</td>
+				<td width = 200px rowspan="2" style="padding-left: 20px;">
+					<p id= time style="font-size: 50px"></p>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-left: 10px;"> 
+					<button style="margin-bottom: 60px;" id= "reset" onclick="reset()">
+						RESET
+					</button>
+				</td>
+			</tr>
+
+		</table>
+		<br><hr><br>
+		<table >
+			<tr>
+				<td rowspan="3" width="70%">
+					<div style="border-width: 2px;">
+						<textarea class="box" id="answerBox" rows="2" cols="20" wrap="hard" style="font-size: 19px; "></textarea>
+					</div>
+				</td>
+				<td>
+					<button id= "pause" onclick="pause()">PAUSE</button>
+				</td>
+				<td rowspan="3">
+					<div id="summary">
+						<span id="title">Summary</span><hr>
+					    <span id="current"></span>
+					    <span> characters</span><br><br>
+					    <span id="timetaken"></span>
+					  </div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id= "resume" onclick="start()">RESUME</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id= "stop" onclick="stop()">STOP</button>
+				</td>
+			</tr>
+		</table>
+		<br><hr>
+		
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		document.getElementById("answerBox").disabled= true;
+		var timeElapsed = 0;
+        var myTimer = 0;
+        var min= 15;
+        var sec= 0;
+
+        function start() {
+			document.getElementById("answerBox").disabled= false;
+        	document.getElementById("answerBox").focus();
+            myTimer = setInterval(function(){
+	            if (sec==0) {
+	                min-=1;
+	                sec=60;
+	            }
+	            timeElapsed += 1;
+	            sec-=1;
+	            if(timeElapsed<900){
+                    document.getElementById("time").innerText = min +" : "+ sec ;
+                }
+                else{
+                    document.getElementById("time").innerText = "TIME UP !" ;
+                }
+	            
+	        }, 1000) ;
+        }
+
+        function pause() {
+            clearInterval(myTimer);
+			document.getElementById("answerBox").disabled= true;
+        }
+
+        $('textarea').keyup(function() {
+    
+	        var characterCount = $(this).val().length,
+		      	current = $('#current');
+		    
+		  	current.text(characterCount);
+		});
+
+        function stop() {
+        	document.getElementById("answerBox").disabled= true;
+            clearInterval(myTimer);
+            var minuteTaken= Math.floor((timeElapsed)/60);
+            var secondTaken= (timeElapsed)%60;
+            document.getElementById("timetaken").innerText = minuteTaken + " min " + secondTaken + " sec";
+        }
+
+        function reset() {
+        	document.getElementById("answerBox").disabled= true;
+        	document.getElementById("answerBox").disabled= true;
+           timeElapsed = 0;
+           min = 15;
+           sec= 0;
+           clearInterval(myTimer);
+           document.getElementById("time").innerHTML = "";
+           document.getElementById("answerBox").value= "";
+           document.getElementById("timetaken").innerHTML ="";
+        }
+
+        function loadQuestion() {
+      	var questions= ["", "question1.html", "question2.html", "question3.html", "question4.html", "question5.html", 
+							"question6.html", "question7.html", "question8.html", "question9.html", "question10.html", 
+							"question11.html", "question12.html", "question13.html", "question14.html", "question15.html", 
+							"question16.html", "question17.html", "question18.html", "question19.html", "question20.html", 
+							"question21.html", "question22.html", "question23.html", "question24.html", "question25.html", 
+							"question26.html", "question27.html", "question28.html", "question29.html", "question30.html", 
+							"question31.html", "question32.html", "question33.html", "question34.html", "question35.html", 
+							"question36.html", "question37.html", "question38.html", "question39.html", "question40.html", 
+							"question41.html", "question42.html", "question43.html", "question44.html", "question45.html", 
+							"question46.html", "question47.html", "question48.html", "question49.html", "question50.html",
+							"question51.html", "question52.html", "question53.html", "question54.html", "question55.html", 
+							"question56.html", "question57.html", "question58.html", "question2018.html"];
+      	var kstrokes= 	[0, 2066, 2038, 2073, 2082, 2029, 2001, 2099, 2022, 2071, 2039, 
+							2017, 2018, 2030, 2013, 2077, 2060, 2025, 2043, 2059, 2004, 
+							2023, 2040, 2021, 2083, 2038, 2039, 2047, 2031, 2011, 2011, 
+							2073, 2069, 2067, 2068, 2035, 2055, 2019, 2044, 2067, 2022, 
+							2040, 2037, 2016, 2002, 2042, 2014, 2071, 2062, 2018, 2060,
+							2054, 2010, 2078, 2007, 2004, 2004, 2033, 2030, 2034];
+        var qNo= document.getElementById('question').value;
+        var loc = "CGL_Questions/" + questions[qNo];
+        document.getElementById('displayQuestion').setAttribute('src', loc);
+        document.getElementById('questionDetails').innerHTML= "Question " + qNo + " : "+ kstrokes[qNo] +" keystrokes";
+    }
+
+		$(document).ready(function(){
+			$("#start").focus();
+		    $("#summary").hide();
+		    $("#reset").hide();						
+		    $("#stop").hide();
+		    $("#pause").hide();
+		    $("#resume").hide();
+		    $("#questionDetails").hide();
+
+		    $("#start").click(function(){
+		    	$("#start").hide();
+		    	$("#pause").show();
+		    	$("#stop").show();
+		    	$("#qText").hide();
+		    	$("#question").hide();
+		    	$("#questionDetails").show();
+		    	$("#time").show();
+			});
+
+		    $("#pause").click(function(){
+			  	$("#reset").show();
+			    $("#resume").show();
+			    $("#stop").hide();
+			    $("#pause").hide();
+			});
+
+			$("#resume").click(function(){
+			  	$("#resume").hide();
+		    	$("#pause").show();
+		    	$("#stop").show();
+			  	$("#reset").hide();
+			});
+
+			$("#stop").click(function(){
+			  	$("#reset").show();
+			    $("#summary").show();
+			    $("#pause").hide();
+			    $("#stop").hide();
+			    $("#time").hide();
+
+
+			});
+
+			$("#reset").click(function(){
+			  	$("#start").show();
+			  	$("#reset").hide();
+			  	$("#resume").hide();
+			  	$("#summary").hide();
+			  	$("#questionDetails").hide();
+			  	$("#qText").show();
+		    	$("#question").show();
+			});			
+		});
+
+       
+	</script>
+</html

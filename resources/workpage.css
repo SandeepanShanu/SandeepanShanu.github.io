@@ -1,0 +1,64 @@
+.home{
+			height: 75px;
+			width: 450px;
+			font-size: 30px;
+			background: #FDEDEC;
+			border-radius: 5px;
+			border-color: #FDEDEC;
+			color: #CB4335;
+		}
+
+		.home:hover{
+			font-size: 32px;
+			color: #E9FFFF;
+			background: #CB4335;
+		}
+		.box{
+			width: 1000px;
+			height: 200px;
+			border: 5px;
+			margin-left: 20px;
+			border-radius: 2px;
+			border-color: black;
+			background: white; 
+			font-family: consolas;
+		}
+
+		#heading{
+			font-family: sans-serif;
+			font-weight: bold;
+			text-align: center;
+			font-size: 120;
+			color: #C0392B;
+		}
+
+		#summary{
+			height: 200px;
+			width: 200px;
+			font-size: 25px;
+			padding-top: 10px;
+			padding-left: 100px;
+			text-align: center;
+		}
+
+		button{
+			width: 200px; 
+			height: 50px;
+			font-weight: bold;
+			background-color: #CB4335 ;
+			color:  #FFFFFF  ;
+			border-color: #F5B7B1 ;
+		}
+		button:hover{
+			background-color: #FDEDEC; ;
+			color: #CB4335;
+			border-color: #CB4335;
+			font-weight: bold;
+		}
+		button:focus{
+			background-color: #CB4335;
+			color:  #FFFFFF  ;
+			font-size: 15px;
+			border-color: #F5B7B1 ;	
+			border-width: 2px;
+		}
